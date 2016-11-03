@@ -9,6 +9,10 @@ Deep learning (also known as deep structured learning, hierarchical learning or 
 ### Deep belief networks
 ### Convolutional deep belief networks
 
-Each of the above mentitioned stuff is an ocean in itself, but in a way these are simple; there are neurons which are stacked/connected to other neurons and each neuron has a proprty, when a neuron is triggred depending upon its proprty it may or maynot trigger other neuron. It gets intresting when a set of stacked neuron are connected to another set of stacked neurons.
+Each of the above mentitioned stuff is an ocean in itself, but in a way these are simple; there are neurons which are stacked/connected to other neurons and each neuron has a property, when a neuron is triggred depending upon its property it may or maynot trigger other neuron. It gets intresting when a set of stacked neuron are connected to another set of stacked neurons.
 
 #### I am no expert in this subject but I know experts have already provided some implementation & I can use them; This project is for those who wants to experiement with the neural networks without knowing the technicalities, api etc 
+
+
+planning something like this 
+https://blockly-demo.appspot.com/static/demos/blockfactory/index.html#gqy3uk
