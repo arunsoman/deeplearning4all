@@ -19,7 +19,7 @@ window.customElements.define('blockly-block' ,class extends HTMLElement{
   attachBlock(){
     var d= document.createElement('div')
     d.setAttribute("id","blocklyDiv")
-    d.setAttribute("style","height: 480px; width: 600px;")
+    d.setAttribute("style","height: 720px; width: 100%;")
     var xml =`<xml id="toolbox-categories" style="display: none">
     <category name="Utils" colour="50">
       <block type="text"></block>
@@ -68,7 +68,7 @@ window.customElements.define('blockly-block' ,class extends HTMLElement{
   }
 
   getCode(){
-    var code =''// Blockly.Python.workspaceToCode(this.workspace)
+    var code = Blockly.Python.workspaceToCode(this.workspace)
     return code
   }
     connectedCallback(){

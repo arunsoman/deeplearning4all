@@ -87,7 +87,7 @@ Blockly.defineBlocksWithJsonArray([
 },
 {
   "type": "csv_reader",
-  "message0": "CSV Reader %1 URL %2 %3 URI %4 %5 Config %6 %7 Output %8 %9 Columns %10 %11 Transformers %12",
+  "message0": "CSV Reader %1 URL %2 %3 URI %4 %5 Config %6 %7 Output %8 %9 Columns %10 %11 Transformers %12 Selection %13 %14 Number of rows %15",
   "args0": [
     {
       "type": "input_dummy"
@@ -144,6 +144,32 @@ Blockly.defineBlocksWithJsonArray([
     {
       "type": "input_value",
       "name": "Transformers"
+    },
+    {
+      "type": "field_dropdown",
+      "name": "selection",
+      "options": [
+        [
+          "head",
+          "head"
+        ],
+        [
+          "tail",
+          "tail"
+        ],
+        [
+          "full",
+          "full"
+        ]
+      ]
+    },
+    {
+      "type": "input_dummy"
+    },
+    {
+      "type": "field_input",
+      "name": "number of rows",
+      "text": "5"
     }
   ],
   "inputsInline": false,
@@ -461,6 +487,10 @@ Blockly.defineBlocksWithJsonArray([
         [
           "SVM Classifiication",
           "SVM Classification"
+        ],
+        [
+          "Gradient Boosting Regressor",
+          "Gradient Boosting Regressor"
         ],
         [
           "Multi-Output Gradient Boosting Regressor",
@@ -954,7 +984,7 @@ Blockly.defineBlocksWithJsonArray([
 },
 {
   "type": "denorm",
-  "message0": "DeNorm %1 Data/Shaper %2 Normalizer %3",
+  "message0": "DeNorm %1 Data/Shaper %2 Normalizer %3 Axis %4",
   "args0": [
     {
       "type": "input_dummy"
@@ -966,8 +996,27 @@ Blockly.defineBlocksWithJsonArray([
     {
       "type": "input_value",
       "name": "normalizer"
+    },
+    {
+      "type": "field_dropdown",
+      "name": "axis",
+      "options": [
+        [
+          "X",
+          "x"
+        ],
+        [
+          "Y",
+          "y"
+        ],
+        [
+          "Both",
+          "both"
+        ]
+      ]
     }
   ],
+  "inputsInline": false,
   "output": null,
   "colour": 230,
   "tooltip": "",

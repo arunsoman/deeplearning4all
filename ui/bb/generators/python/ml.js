@@ -50,6 +50,14 @@ Blockly.Python['stripper'] = function(block) {
 };
 
 Blockly.Python['csv_reader'] = function(block) {
+  var text_url = block.getFieldValue('url');
+  var text_uri = block.getFieldValue('uri');
+  var text_config = block.getFieldValue('config');
+  var dropdown_streamtype = block.getFieldValue('streamType');
+  var text_columns = block.getFieldValue('columns');
+  var value_transformers = Blockly.Python.valueToCode(block, 'Transformers', Blockly.Python.ORDER_ATOMIC);
+  var dropdown_selection = block.getFieldValue('selection');
+  var text_number_of_rows = block.getFieldValue('number of rows'); 
   
   if( !g['csv_reader'])
     add_import('from reader import Reader','csv_reader')
@@ -277,6 +285,7 @@ Blockly.Python['norm'] = function(block) {
 Blockly.Python['denorm'] = function(block) {
   var value_data = Blockly.Python.valueToCode(block, 'data', Blockly.Python.ORDER_ATOMIC);
   var value_normalizer = Blockly.Python.valueToCode(block, 'normalizer', Blockly.Python.ORDER_ATOMIC);
+  var dropdown_axis = block.getFieldValue('axis');
   // TODO: Assemble Python into code variable.
   var code = '...';
   // TODO: Change ORDER_NONE to the correct strength.
