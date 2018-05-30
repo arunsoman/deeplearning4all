@@ -1,0 +1,81 @@
+
+<script src="blockly_compressed.js"></script>
+<script src="blocks_compressed.js"></script>
+<script src="python.js"></script>
+<script src="en.js"></script>
+
+<script>
+window.customElements.define('blockly-block' ,class extends HTMLElement{
+  constructor(){
+    super();
+  }
+
+  attachBlock(){
+    var d= document.createElement('div')
+    d.setAttribute("id","blocklyDiv")
+    d.setAttribute("style","height: 480px; width: 600px;")
+    var xml =`<xml id="toolbox-categories" style="display: none">
+    <category name="Utils" colour="50">
+      <block type="text"></block>
+      <block type="tee"></block>
+      <block type="createdf"></block>
+      <block type="program"></block>
+      <block type="train"></block>
+      <block type="shaper"></block>
+      <block type="predict"></block>
+      <block type="lists_create_with"></block>
+      <block type="normalizer"></block>
+      <block type="norm"></block>
+      <block type="denorm"></block>
+    </category>
+    <category name="NN" colour="100">
+      <block type="nn_config"></block>
+      <block type="nn_layer_config"></block>
+    </category>
+    <category name="Transformer" colour="150">
+      <block type="joiner"></block>
+      <block type="joiner_input"></block>
+      <block type="stripper"></block>
+      <block type="transformer"></block>
+    </category>
+    <category name="IO" colour="200">
+      <block type="csv_reader"></block>
+      <block type="image_reader"></block>
+      <block type="model_reader"></block>
+      <block type="csv_writer"></block>
+      <block type="image_writer"></block>
+      <block type="model_writer"></block>
+    </category>
+    <category name="Models" colour="250">
+      <block type="supervised_models"></block>
+      <block type="unsupervised_models"></block>
+    </category>
+    <sep></sep>
+    <category name="Variables" colour="330" custom="VARIABLE"></category>
+    <category name="Functions" colour="290" custom="PROCEDURE"></category>
+  </xml>
+`
+    d.innerHTML = xml
+    var bb=document.querySelector('blockly-block')
+    bb.appendChild(d)
+    this.workspace = Blockly.inject('blocklyDiv',{toolbox:bb.lastElementChild.lastElementChild})
+  }
+
+  getCode(){
+    var code =''// Blockly.Python.workspaceToCode(this.workspace)
+    return code
+  }
+    connectedCallback(){
+    //this.toShadow(this);
+   console.log("connected");
+    //this.workspace = Blockly.inject('blocklyDiv',{toolbox:this.lastElementChild})
+  }
+  disconnectedCallback(){}
+  adoptedCallback() {
+    console("adopted")
+  }
+  attributeChangedCallback(name, oldValue, newValue) {}
+  });
+  console.log("**********")
+
+</script>

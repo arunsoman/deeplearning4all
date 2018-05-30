@@ -1,0 +1,74 @@
+<script>
+window.customElements.define('load-template' ,class extends HTMLElement {
+  constructor() {
+    super();
+    this.template = document.createElement('template');
+    this.template.innerHTML = `
+      <button
+        id="button"
+        type="button">Click Me Dummy!</button>
+    `
+    this.attachShadow({mode: 'open'});
+    let _ = this;
+
+    this.loadBlocks=function (toggle) {
+        let xml_texts = [
+          `<xml xmlns="http://www.w3.org/1999/xhtml"><variables><variable type="" id="Q@w4rar7qSsNTSMVep~[">ml</variable><variable type="" id="{ZykCu[WTw$?,YMU@vCV">config</variable></variables><block type="program" id="L8rnB[u%~9#oY#kokzU(" x="287" y="-12"><statement name="operation"><block type="variables_set" id="H-?acKFqJ3Nz+iQQazeU"><field name="VAR" id="Q@w4rar7qSsNTSMVep~[" variabletype="">ml</field><value name="VALUE"><block type="train" id="n]Q,Hp(~5l2Qd?7DXaU["><field name="show result">TRUE</field><value name="Model"><block type="supervised_models" id="b0W{E{*k4su9t8BmR+@4"><field name="type">SVM Regression</field><field name="shape">2,2</field><value name="Config"><block type="variables_get" id=")rci/gVQhe1~x[Z}L_oT"><field name="VAR" id="{ZykCu[WTw$?,YMU@vCV" variabletype="">config</field></block></value></block></value><value name="shaper"><block type="shaper" id="_y4Fg!ergVWHG(x\`r6A4"><field name="input columns">*</field><field name="xdimension">1</field><field name="output columns">-1</field><field name="ydimension">1</field><field name="yoffset">0</field><field name="test data">20</field><value name="shaper_xinput_csv"><block type="image_reader" id="CiP#QiMY!9:[}wP~C0TP"><field name="url">ftp://</field><field name="uri">/</field></block></value><value name="shaper_yinput_csv"><block type="image_reader" id="z;\`whlYCI9W}pvOH(zcJ"><field name="url">ftp://</field><field name="uri">/</field></block></value></block></value></block></value><next><block type="image_writer" id="yuSN\`:w|{+4wIQ+m=h%-"><field name="writer_uri_var">default</field><field name="imagewriter_regex">*.jpg</field><value name="writer_input"><block type="predict" id="x4+]l5nDf(itUsv,+m?L"><field name="predict_model" id="Q@w4rar7qSsNTSMVep~[" variabletype="">ml</field><value name="Shape"><block type="shaper" id="@fP4?anI|N{t6DbRHI56"><field name="input columns">*</field><field name="xdimension">1</field><field name="output columns">-1</field><field name="ydimension">1</field><field name="yoffset">0</field><field name="test data">20</field><value name="shaper_xinput_csv"><block type="image_reader" id="3rdp}8~lU\`;:#!KtL5GQ"><field name="url">ftp://</field><field name="uri">/</field></block></value><value name="shaper_yinput_csv"><block type="image_reader" id="%ZQtjVccu_oxLdC;pOdz"><field name="url">ftp://</field><field name="uri">/</field></block></value></block></value></block></value></block></next></block></statement></block></xml>`,
+          ]
+      return function(event) {
+        const result = _.attributes.watch.value.split(' ')
+          .map((e) => e + ":" + document.getElementById(e)[_.attributes.query.value])
+        console.log(result)
+        _.bb.attachBlock()
+
+        let xml_text = 0;
+        switch (result){
+          case 'tech:super-lp,process:csv':
+            xml_text=0;
+        }
+        const xml = Blockly.Xml.textToDom(xml_texts[xml_text]);
+        Blockly.Xml.domToWorkspace(xml, _.bb.workspace);
+        _.shadowRoot.firstElementChild.innerText = "Get code";
+        _.button.onclick = toggle()
+      }
+    }
+  }
+
+
+
+  connectedCallback(){
+    let _ = this;
+    _.shadowRoot.appendChild(
+        this.template.content.cloneNode(true));
+    _.button = _.shadowRoot.querySelector('button');
+    _.bb = document.getElementById(_.attributes.update.value.split(" ")[0])
+    //_.bb.ready=function(){
+
+   // }
+
+    const toggle = function (){
+      const editor = document.getElementById('pyeditor');
+      const bb = _.bb;
+      let showCode = function () {
+        bb.hidden = true;
+        editor.showcode(bb.getCode())
+        editor.hidden = ""
+        _.shadowRoot.firstElementChild.innerText="show blocks";
+        _.button.onclick =showBlock
+      }
+      let showBlock = function () {
+        bb.hidden = '';
+        editor.showcode('')
+        editor.hidden = "true"
+        _.shadowRoot.firstElementChild.innerText="show code";
+        _.button.onclick =showCode
+      }
+      let flag = 1;
+      return function (){
+        return showCode
+      }
+    }
+    _.button.onclick = _.loadBlocks(toggle())
+  }
+});
+</script>

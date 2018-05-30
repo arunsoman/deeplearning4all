@@ -1,0 +1,41 @@
+<script>
+window.customElements.define('learning-selector' ,class extends HTMLElement {
+  constructor() {
+    super();
+    this.template = document.createElement('template');
+    this.template.innerHTML = `
+      <p id="tech">pick tech
+      <select name="selector" class="learningSelector" id="learningSelector">
+        <option value="super-lp">super-lp</option>
+        <option value="super-l">super-l</option>
+        <option value="super-p">super-p</option>
+        <option value="un-super">un-super</option>
+      </select>
+      </p>
+
+      <p id="process">pick process
+      <select name="selector" class="process" id="process">
+        <option value="csv">csv</option>
+        <option value="image">image</option>
+        <option value="text">text</option>
+      </select>
+      </p>
+    `
+
+    this.attachShadow({mode: 'open'});
+  }
+
+  connectedCallback(){
+      this.shadowRoot.appendChild(
+        this.template.content.getElementById(
+          this.attributes.type.value).cloneNode(true));
+  }
+
+  set type(t){
+    this.setAttribute('type',t)
+  }
+  get value(){
+    return this.shadowRoot.querySelector('select').value
+  }
+});
+</script>

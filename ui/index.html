@@ -1,0 +1,29 @@
+<!doctype html>
+<html >
+
+<head>
+  <title></title>
+  <meta name="description" content="">
+
+</head>
+
+<body>
+
+  <link rel="import" href="input/learningSelector.html">
+  <link rel="import" href="input/loadTemplate.html">
+  <link rel="import" href="input/py-editor.html">
+  <link rel="import" href="bb/blocklyBlock.html">
+  <!--  -->
+
+  <learning-selector id="tech" type="tech"></learning-selector>
+  <learning-selector id="process" type="process"></learning-selector>
+  <load-template watch="tech process" query="value"
+                 update="blockly attachBlock"></load-template>
+  <blockly-block id="blockly"></blockly-block>
+  <py-editor id="pyeditor" hidden="true"></py-editor>
+
+
+
+</body>
+
+</html>

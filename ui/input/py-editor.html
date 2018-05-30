@@ -1,0 +1,30 @@
+<script src="../utils/beautify.js" type="text/javascript" charset="utf-8"></script>
+<script>
+window.customElements.define('py-editor' ,class extends HTMLElement {
+  constructor() {
+    super();
+    this.template = document.createElement('template');
+    this.template.innerHTML = `
+    <pre id="editor">class MyParentClass(object):
+def __init__(self):
+pass
+
+</pre>
+`
+this.attachShadow({mode: 'open'});
+
+  }
+
+  connectedCallback(){
+      let me = this;
+      me.shadowRoot.appendChild(
+        this.template.content.cloneNode(true));
+
+  }
+
+  showcode(code){
+    this.hidden = ''
+    this.shadowRoot.firstElementChild.innerText=js_beautify(code)
+  }
+});
+</script>
