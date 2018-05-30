@@ -17,4 +17,4 @@ Each of the above mentitioned stuff is an ocean in itself, but in a way these ar
 
 
 planning something like this 
-https://blockly-demo.appspot.com/static/demos/blockfactory/index.html#gqy3uk
+https://arunsoman.github.io/deeplearning4kids/ui/index.html
