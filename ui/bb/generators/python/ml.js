@@ -146,15 +146,15 @@ Blockly.Python['supervised_models'] = function(block) {
   return [code, Blockly.Python.ORDER_NONE];
 };
 
-Blockly.JavaScript['unsupervised_models'] = function(block) {
+Blockly.Python['unsupervised_models'] = function(block) {
   var dropdown_type = block.getFieldValue('type');
   var text_shape = block.getFieldValue('shape');
-  var value_config = Blockly.JavaScript.valueToCode(block, 'Config', Blockly.JavaScript.ORDER_ATOMIC);
-  var value_input = Blockly.JavaScript.valueToCode(block, 'input', Blockly.JavaScript.ORDER_ATOMIC);
-  // TODO: Assemble JavaScript into code variable.
+  var value_config = Blockly.Python.valueToCode(block, 'Config', Blockly.Python.ORDER_ATOMIC);
+  var value_input = Blockly.Python.valueToCode(block, 'input', Blockly.Python.ORDER_ATOMIC);
+  // TODO: Assemble Python into code variable.
   var code = '...';
   // TODO: Change ORDER_NONE to the correct strength.
-  return [code, Blockly.JavaScript.ORDER_NONE];
+  return [code, Blockly.Python.ORDER_NONE];
 };
 
 Blockly.Python['train'] = function(block) {
