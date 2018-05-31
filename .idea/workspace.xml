@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e18bc8c9-e916-4aaa-9785-15a0dec5a0e9" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change beforePath="$PROJECT_DIR$/ui/bb/blocklyBlock.html" afterPath="$PROJECT_DIR$/ui/bb/blocklyBlock.html" />
+      <change beforePath="$PROJECT_DIR$/ui/bb/blocks/ml.js" afterPath="$PROJECT_DIR$/ui/bb/blocks/ml.js" />
       <change beforePath="$PROJECT_DIR$/ui/bb/generators/python/ml.js" afterPath="$PROJECT_DIR$/ui/bb/generators/python/ml.js" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -14,6 +15,16 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="blocklyBlock.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/ui/bb/blocklyBlock.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="245">
+              <caret line="66" column="43" lean-forward="false" selection-start-line="66" selection-start-column="43" selection-end-line="66" selection-end-column="43" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="ml.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/ui/bb/generators/python/ml.js">
           <provider selected="true" editor-type-id="text-editor">
@@ -24,11 +35,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/ui/index.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="0">
               <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="loadTemplate.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ui/input/loadTemplate.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="375">
+              <caret line="25" column="0" lean-forward="false" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -63,9 +84,9 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/ui/input/py-editor.html" />
-        <option value="$PROJECT_DIR$/ui/bb/blocklyBlock.html" />
         <option value="$PROJECT_DIR$/ui/input/loadTemplate.html" />
         <option value="$PROJECT_DIR$/ui/bb/generators/python/ml.js" />
+        <option value="$PROJECT_DIR$/ui/bb/blocklyBlock.html" />
       </list>
     </option>
   </component>
@@ -119,21 +140,6 @@
               <item name="deeplearning4kids" type="462c0819:PsiDirectoryNode" />
               <item name="ui" type="462c0819:PsiDirectoryNode" />
               <item name="bb" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="deeplearning4kids" type="b2602c69:ProjectViewProjectNode" />
-              <item name="deeplearning4kids" type="462c0819:PsiDirectoryNode" />
-              <item name="ui" type="462c0819:PsiDirectoryNode" />
-              <item name="bb" type="462c0819:PsiDirectoryNode" />
-              <item name="generators" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="deeplearning4kids" type="b2602c69:ProjectViewProjectNode" />
-              <item name="deeplearning4kids" type="462c0819:PsiDirectoryNode" />
-              <item name="ui" type="462c0819:PsiDirectoryNode" />
-              <item name="bb" type="462c0819:PsiDirectoryNode" />
-              <item name="generators" type="462c0819:PsiDirectoryNode" />
-              <item name="python" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="deeplearning4kids" type="b2602c69:ProjectViewProjectNode" />
@@ -272,22 +278,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ui/bb/blocklyBlock.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="675">
-          <caret line="45" column="46" lean-forward="false" selection-start-line="45" selection-start-column="46" selection-end-line="45" selection-end-column="46" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ui/input/loadTemplate.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="25" column="0" lean-forward="false" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/ml-blockly/generators/ml.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="215">
@@ -308,6 +298,22 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ui/input/loadTemplate.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="375">
+          <caret line="25" column="0" lean-forward="false" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ui/bb/blocklyBlock.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="245">
+          <caret line="66" column="43" lean-forward="false" selection-start-line="66" selection-start-column="43" selection-end-line="66" selection-end-column="43" />
           <folding />
         </state>
       </provider>

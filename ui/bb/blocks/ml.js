@@ -1051,5 +1051,132 @@ Blockly.defineBlocksWithJsonArray([
   "colour": 230,
   "tooltip": "",
   "helpUrl": ""
+},
+{
+  "type": "text_tokenizer",
+  "message0": "Text tokenizer %1 Vocabulary %2 Column %3",
+  "args0": [
+    {
+      "type": "input_dummy"
+    },
+    {
+      "type": "input_value",
+      "name": "text_tokenizer_vocabulary"
+    },
+    {
+      "type": "field_input",
+      "name": "text_tokenizer_column",
+      "text": "0"
+    }
+  ],
+  "inputsInline": false,
+  "output": null,
+  "colour": 230,
+  "tooltip": "",
+  "helpUrl": ""
+},
+{
+  "type": "label_encoder",
+  "message0": "Label Encoder %1 Classes %2 Column %3",
+  "args0": [
+    {
+      "type": "input_dummy"
+    },
+    {
+      "type": "input_value",
+      "name": "label_encoder_classes"
+    },
+    {
+      "type": "field_input",
+      "name": "label_encoder_column",
+      "text": "0"
+    }
+  ],
+  "inputsInline": false,
+  "output": null,
+  "colour": 230,
+  "tooltip": "",
+  "helpUrl": ""
+},
+{
+  "type": "encode_labels",
+  "message0": "Encode labels %1 Y-Axis data %2 Label Encoder %3 Column %4",
+  "args0": [
+    {
+      "type": "input_dummy"
+    },
+    {
+      "type": "input_value",
+      "name": "encode_labels_data"
+    },
+    {
+      "type": "input_value",
+      "name": "encode_labels_encoder"
+    },
+    {
+      "type": "field_input",
+      "name": "encode_labels_column",
+      "text": "0"
+    }
+  ],
+  "inputsInline": false,
+  "output": null,
+  "colour": 230,
+  "tooltip": "",
+  "helpUrl": ""
+}
+,{
+  "type": "decode_labels",
+  "message0": "Decode labels %1 Encoded Labels %2 Label Encoder %3 Column %4",
+  "args0": [
+    {
+      "type": "input_dummy"
+    },
+    {
+      "type": "input_value",
+      "name": "decode_labels_data"
+    },
+    {
+      "type": "input_value",
+      "name": "decode_labels_encoder"
+    },
+    {
+      "type": "field_input",
+      "name": "decode_labels_column",
+      "text": "0"
+    }
+  ],
+  "inputsInline": false,
+  "output": null,
+  "colour": 230,
+  "tooltip": "",
+  "helpUrl": ""
+},
+{
+  "type": "text_encoder",
+  "message0": "Text Encoder %1 Input data %2 Tokenizer %3 Column %4",
+  "args0": [
+    {
+      "type": "input_dummy"
+    },
+    {
+      "type": "input_value",
+      "name": "text_encoder_data"
+    },
+    {
+      "type": "input_value",
+      "name": "text_encoder_tokenizer"
+    },
+    {
+      "type": "field_input",
+      "name": "text_encoder_column",
+      "text": "0"
+    }
+  ],
+  "inputsInline": false,
+  "output": null,
+  "colour": 230,
+  "tooltip": "",
+  "helpUrl": ""
 }
 ]);
