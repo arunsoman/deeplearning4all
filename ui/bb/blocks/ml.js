@@ -150,16 +150,16 @@ Blockly.defineBlocksWithJsonArray([
       "name": "selection",
       "options": [
         [
+          "full",
+          "full"
+        ],
+        [
           "head",
           "head"
         ],
         [
           "tail",
           "tail"
-        ],
-        [
-          "full",
-          "full"
         ]
       ]
     },
@@ -537,7 +537,7 @@ Blockly.defineBlocksWithJsonArray([
 },
 {
   "type": "unsupervised_models",
-  "message0": "Unsupervised Models %1 %2 %3 Shape %4 %5 Config %6",
+  "message0": "Unsupervised Models %1 %2 %3 Shape %4 %5 Config %6 Input %7",
   "args0": [
     {
       "type": "input_dummy"
@@ -545,7 +545,7 @@ Blockly.defineBlocksWithJsonArray([
     {
       "type": "field_dropdown",
       "name": "type",
-      "options": [        
+      "options": [
         [
           "DLib Image Clustering",
           "DLib Image Clustering"
@@ -578,11 +578,15 @@ Blockly.defineBlocksWithJsonArray([
         "nnconfig",
         "String"
       ]
+    },
+    {
+      "type": "input_value",
+      "name": "input"
     }
   ],
   "output": null,
   "colour": 230,
-  "tooltip": "",
+  "tooltip": "testingte  stingg",
   "helpUrl": ""
 },
 {
@@ -755,7 +759,7 @@ Blockly.defineBlocksWithJsonArray([
 },
 {
   "type": "image_writer",
-  "message0": "Image Writer %1 Image %2 URI %3 %4 Regex %5",
+  "message0": "Image Writer %1 Image %2 Result %3 URI %4 %5 Regex %6",
   "args0": [
     {
       "type": "input_dummy"
@@ -764,6 +768,10 @@ Blockly.defineBlocksWithJsonArray([
       "type": "input_value",
       "name": "writer_input",
       "check": "image"
+    },
+    {
+      "type": "input_value",
+      "name": "result"
     },
     {
       "type": "field_input",
@@ -1017,6 +1025,28 @@ Blockly.defineBlocksWithJsonArray([
     }
   ],
   "inputsInline": false,
+  "output": null,
+  "colour": 230,
+  "tooltip": "",
+  "helpUrl": ""
+},
+{
+  "type": "image_transformer",
+  "message0": "Image transformer %1 Image(s) %2 Config %3",
+  "args0": [
+    {
+      "type": "input_dummy"
+    },
+    {
+      "type": "input_value",
+      "name": "input"
+    },
+    {
+      "type": "input_value",
+      "name": "config",
+      "check": "String"
+    }
+  ],
   "output": null,
   "colour": 230,
   "tooltip": "",

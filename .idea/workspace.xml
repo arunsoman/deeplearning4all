@@ -3,6 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="e18bc8c9-e916-4aaa-9785-15a0dec5a0e9" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/ui/bb/blocklyBlock.html" afterPath="$PROJECT_DIR$/ui/bb/blocklyBlock.html" />
+      <change beforePath="$PROJECT_DIR$/ui/bb/blocks/ml.js" afterPath="$PROJECT_DIR$/ui/bb/blocks/ml.js" />
+      <change beforePath="$PROJECT_DIR$/ui/bb/generators/python/ml.js" afterPath="$PROJECT_DIR$/ui/bb/generators/python/ml.js" />
       <change beforePath="$PROJECT_DIR$/ui/input/loadTemplate.html" afterPath="$PROJECT_DIR$/ui/input/loadTemplate.html" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -18,7 +20,7 @@
         <entry file="file://$PROJECT_DIR$/ui/bb/blocklyBlock.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="299">
-              <caret line="54" column="40" lean-forward="false" selection-start-line="54" selection-start-column="40" selection-end-line="54" selection-end-column="40" />
+              <caret line="45" column="46" lean-forward="false" selection-start-line="45" selection-start-column="46" selection-end-line="45" selection-end-column="46" />
               <folding />
             </state>
           </provider>
@@ -57,8 +59,8 @@
       <file leaf-file-name="loadTemplate.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/ui/input/loadTemplate.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="285">
-              <caret line="58" column="23" lean-forward="false" selection-start-line="58" selection-start-column="23" selection-end-line="58" selection-end-column="23" />
+            <state relative-caret-position="240">
+              <caret line="25" column="2203" lean-forward="false" selection-start-line="25" selection-start-column="2203" selection-end-line="25" selection-end-column="2203" />
               <folding />
             </state>
           </provider>
@@ -242,15 +244,15 @@
     <entry file="file://$PROJECT_DIR$/ui/bb/blocklyBlock.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="299">
-          <caret line="54" column="40" lean-forward="false" selection-start-line="54" selection-start-column="40" selection-end-line="54" selection-end-column="40" />
+          <caret line="45" column="46" lean-forward="false" selection-start-line="45" selection-start-column="46" selection-end-line="45" selection-end-column="46" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/ui/input/loadTemplate.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="58" column="23" lean-forward="false" selection-start-line="58" selection-start-column="23" selection-end-line="58" selection-end-column="23" />
+        <state relative-caret-position="240">
+          <caret line="25" column="2203" lean-forward="false" selection-start-line="25" selection-start-column="2203" selection-end-line="25" selection-end-column="2203" />
           <folding />
         </state>
       </provider>
