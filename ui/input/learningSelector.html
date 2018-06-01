@@ -4,16 +4,16 @@ window.customElements.define('learning-selector' ,class extends HTMLElement {
     super();
     this.template = document.createElement('template');
     this.template.innerHTML = `
-      <p id="tech">pick tech
+      <p id="tech">I want to do 
       <select name="selector" class="learningSelector" id="learningSelector">
-        <option value="super-lp">super-lp</option>
-        <option value="super-l">super-l</option>
-        <option value="super-p">super-p</option>
-        <option value="un-super">un-super</option>
+        <option value="super-lp">supervised learning with prediction</option>
+        <option value="super-l">supervised learning only</option>
+        <option value="super-p">supervised prediction with prelearnt model</option>
+        <option value="un-super">un-supervised</option>
       </select>
       </p>
 
-      <p id="process">pick process
+      <p id="process">on
       <select name="selector" class="process" id="process">
         <option value="csv">csv</option>
         <option value="image">image</option>
