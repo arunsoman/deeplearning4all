@@ -43,9 +43,10 @@ Blockly.Python['tee'] = function(block) {
 Blockly.Python['stripper'] = function(block) {
   var text_columns = block.getFieldValue('columns');
   var value_csv = Blockly.Python.valueToCode(block, 'csv', Blockly.Python.ORDER_ATOMIC);
-  // TODO: Assemble Python into code variable.
-  var code = '...';
-  // TODO: Change ORDER_NONE to the correct strength.
+    
+  if( !g['stripper'])
+    add_import('from transform import stripper','stripper')
+  var code = 'stripper.strip(columns=\'' + text_columns +'\',df='+value_csv+')'
   return [code, Blockly.Python.ORDER_NONE];
 };
 
@@ -53,24 +54,26 @@ Blockly.Python['csv_reader'] = function(block) {
   var text_url = block.getFieldValue('url');
   var text_uri = block.getFieldValue('uri');
   var text_config = block.getFieldValue('config');
+  var text_csv_reader_header = block.getFieldValue('csv_reader_header');
   var dropdown_streamtype = block.getFieldValue('streamType');
   var text_columns = block.getFieldValue('columns');
   var value_transformers = Blockly.Python.valueToCode(block, 'Transformers', Blockly.Python.ORDER_ATOMIC);
   var dropdown_selection = block.getFieldValue('selection');
-  var text_number_of_rows = block.getFieldValue('number of rows'); 
+  var text_number_of_rows = block.getFieldValue('number of rows');
   
   if( !g['csv_reader'])
     add_import('from reader import Reader','csv_reader')
 
   var code = 'Reader.read_csv("'+block.getFieldValue('url')+'","'
-                        +block.getFieldValue('uri')+'",config="'
-                        +block.getFieldValue('config')+'",streamType="'
-                        +block.getFieldValue('streamType')+'",columns="'
-                        +block.getFieldValue('columns')
-                        +'",filter="'+dropdown_selection+'",count='+text_number_of_rows+')';
-
-  var value_transformers = Blockly.Python.valueToCode(block, 'Transformers', Blockly.Python.ORDER_ATOMIC);
- 
+                        +block.getFieldValue('uri')+
+                        '",config="'+block.getFieldValue('config')+
+                        '",streamType="'+block.getFieldValue('streamType')+
+                        '",columns="'+block.getFieldValue('columns')+
+                        '",filter="'+dropdown_selection+
+                        '",count='+text_number_of_rows+
+                        '",header='+text_csv_reader_header+
+                        '",transformers='+value_transformers+
+                        ')';
   return [code, Blockly.Python.ORDER_NONE];
 };
 
@@ -241,9 +244,9 @@ Blockly.Python['text_writer'] = function(block) {
 Blockly.Python['transformer'] = function(block) {
   var text_column = block.getFieldValue('column');
   var text_function = block.getFieldValue('function');
-  // TODO: Assemble Python into code variable.
-  var code = '...';
-  // TODO: Change ORDER_NONE to the correct strength.
+  if( !g['transformer'] )
+    add_import('from transform import transformer','transformer')
+  var code = '{"column":'+text_column+',"function":"'+text_function+'"}';
   return [code, Blockly.Python.ORDER_NONE];
 };
 
