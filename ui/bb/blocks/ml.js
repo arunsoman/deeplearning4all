@@ -613,7 +613,7 @@ Blockly.defineBlocksWithJsonArray([
   ],
   "output": null,
   "colour": 230,
-  "tooltip": "testingte  stingg",
+  "tooltip": "",
   "helpUrl": "",
   "extensions":["config_on_change"]
 },
