@@ -118,23 +118,46 @@ window.customElements.define('load-template' ,class extends HTMLElement {
   }
 
 
-    drawWorkspace(workspace, xml_text) {
-    const xml = Blockly.Xml.textToDom(xml_text);
+    drawWorkspace(workspace, config) {
+    let current_dom = Blockly.Xml.workspaceToDom(workspace)
+    let xml_text = Blockly.Xml.domToText(current_dom)
+    xml_text = xml_text.replace(/<field name="TEXT">[\s\S]*?<\/field>/, '<field name="TEXT">' + config + '<\/field>');
+    const dom = Blockly.Xml.textToDom(xml_text);
     workspace.clear()
-    Blockly.Xml.domToWorkspace(xml, workspace);
+    Blockly.Xml.domToWorkspace(dom, workspace);
     }
 
 
   changeModel(change) {
   let _ = this
-  let config = 'test fail'
+  let config = ''
     switch(change.newValue){
         case 'SVM Classification':
-            config = 'test success'
+            config = '"gamma" : 1, "c" : 1.0, "kernel": "linear/rbf/poly/sigmoid"'
+            break;
+        case 'SVM Regression':
+            config = '"gamma" : 1, "c" : 1.0, "kernel": "linear/rbf/poly/sigmoid"'
+            break;
+        case 'Gradient Boosting Regressor':
+            config = '"random_state": 0, "max_depth": 6, "learning_rate": 0.1, "subsample": 0.9'
+            break;
+        case 'Multi-Output Gradient Boosting Regressor':
+            config = '"random_state": 0, "max_depth": 6, "learning_rate": 0.1, "subsample": 0.9'
+            break;
+        case 'KNN Classifier':
+            config = '"n_neighbors": 1, "algorithm": "ball_tree", "weights": "distance"'
+            break;
+        case 'DLib Image Clustering':
+            config = '"threshold": 0.5'
+            break;
+        case 'K-Means Clustering':
+            config = '"n_clusters": 3'
+            break;
+        case 'PCA':
+            config = '"n_components": 3'
             break;
     }
-    let xml_text = `<xml xmlns="http://www.w3.org/1999/xhtml"><variables><variable type="" id="a#v@N!10;Y3vwEbQpO|E">model1</variable><variable type="" id=".90!~a@Z_,Mh.h1a;vRW">shape1</variable><variable type="" id="H_hXcN*BYLQc:cUVolu2">train1</variable></variables><block type="program" id="C;ToC*@B+}t1.YqJl3x?" x="585" y="-143"><statement name="operation"><block type="variables_set" id=",s42Aomu;O$t9h^m|L$j"><field name="VAR" id="a#v@N!10;Y3vwEbQpO|E" variabletype="">model1</field><value name="VALUE"><block type="supervised_models" id="?EuwhDXHX?|TW!(=d,dV"><field name="model">KNN Classifier</field><field name="shape">2,2</field><value name="Config"><block type="text" id="\`d)*Q=S??z;$!CkZ\`hcr"><field name="TEXT">{"testing":3, "blah":"blah blah"}</field></block></value></block></value><next><block type="variables_set" id="6Japhuq;O[^-2,yDuk\`9"><field name="VAR" id=".90!~a@Z_,Mh.h1a;vRW" variabletype="">shape1</field><value name="VALUE"><block type="shaper" id="Ui@l9w.1*z,PpP)wEegA"><field name="input columns">*</field><field name="xdimension">1</field><field name="output columns">-1</field><field name="ydimension">1</field><field name="yoffset">0</field><field name="test data">20</field><value name="shaper_xinput_csv"><block type="csv_reader" id="Dwpnj%vfUw-a#KbA[E;M"><field name="url">ftp://</field><field name="uri">/</field><field name="config">default</field><field name="streamType">csv</field><field name="columns"></field><field name="selection">full</field><field name="number of rows">5</field><value name="Transformers"><block type="lists_create_with" id="eCgII5R?P0jK0EtRf3kO"><mutation items="1"></mutation><value name="ADD0"><block type="transformer" id="MF]I/ivecMQra]m^5NED"><field name="column">0</field><field name="function">plus1</field></block></value></block></value></block></value><value name="shaper_yinput_csv"><block type="csv_reader" id="a3ZNg9k5?sqOB9AQBF;L"><field name="url">ftp://</field><field name="uri">/</field><field name="config">default</field><field name="streamType">csv</field><field name="columns"></field><field name="selection">full</field><field name="number of rows">5</field><value name="Transformers"><block type="lists_create_with" id="N/%jc:?R^+lW7lZ?1wMs"><mutation items="1"></mutation><value name="ADD0"><block type="transformer" id="\`1=[~_o5,JB2Rhr3n\`Ek"><field name="column">0</field><field name="function">plus1</field></block></value></block></value></block></value></block></value><next><block type="variables_set" id="4HWUZ(\`!+xJ!m0A,I+l1"><field name="VAR" id="H_hXcN*BYLQc:cUVolu2" variabletype="">train1</field><value name="VALUE"><block type="train" id="W6^KH\`99ZJt6(OxE!Bc["><field name="show result">TRUE</field><value name="Model"><block type="variables_get" id="ZCa;xzoZp4~i;Ic|kkA:"><field name="VAR" id="a#v@N!10;Y3vwEbQpO|E" variabletype="">model1</field></block></value><value name="shaper"><block type="norm" id="Ct]}$jcNDLGBFlcZ?31L"><value name="data"><block type="variables_get" id="Gu2}v;YUc-V(fJp7TA^="><field name="VAR" id=".90!~a@Z_,Mh.h1a;vRW" variabletype="">shape1</field></block></value><value name="normalizer"><block type="normalizer" id="r;m/PqEs?X54wLtt;Tse"><field name="range">-1,1</field></block></value></block></value></block></value><next><block type="csv_writer" id="Nib1zjqz75UL19dy~7wb"><field name="writer_uri_var">default</field><value name="writer_input"><block type="denorm" id="\`xf.yM0~dkI:2K7P(www"><field name="axis">x</field><value name="data"><block type="predict" id="bBJWIKsbIWYjninmAEJ-"><field name="predict_model" id="a#v@N!10;Y3vwEbQpO|E" variabletype="">model1</field><value name="Shape"><block type="variables_get" id="*bg*GK|*!]~5-wpSD_#o"><field name="VAR" id=".90!~a@Z_,Mh.h1a;vRW" variabletype="">shape1</field></block></value></block></value><value name="normalizer"><block type="normalizer" id="={mmi/s|k)04(Ym?l2#~"><field name="range">-1,1</field></block></value></block></value></block></next></block></next></block></next></block></statement></block></xml>`
-    _.drawWorkspace(_.bb.workspace, xml_text)
+    _.drawWorkspace(_.bb.workspace, config)
   }
 });
 </script>
