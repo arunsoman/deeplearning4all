@@ -1,0 +1,258 @@
+<xml xmlns="http://www.w3.org/1999/xhtml"><block type="factory_base" id="3yR{QXt~+l@JzaaCkqL9" deletable="false" movable="false" x="10" y="10">
+    <mutation connections="LEFT"></mutation>
+    <field name="NAME">tee</field>
+    <field name="INLINE">AUTO</field>
+    <field name="CONNECTIONS">LEFT</field>
+    <statement name="INPUTS">
+      <block type="input_statement" id="Z[/Yo+b#_jmc28h($NpB">
+        <field name="INPUTNAME">reader</field>
+        <field name="ALIGN">LEFT</field>
+        <statement name="FIELDS">
+          <block type="field_static" id="k$0@H)/@D4W)bpO{#K;=">
+            <field name="TEXT">readers</field>
+          </block>
+        </statement>
+        <value name="TYPE">
+          <shadow type="type_null" id="RZ]y5{dbL4lYF1j,Bz6|"></shadow>
+          <block type="type_group" id="BJ^(^N^Im/o2EbhUgu*!">
+            <mutation types="2"></mutation>
+            <value name="TYPE0">
+              <block type="type_other" id="}b3GV^h:/yIfM:Nxpr05">
+                <field name="TYPE">csv</field>
+              </block>
+            </value>
+            <value name="TYPE1">
+              <block type="type_other" id="?TC:BQr#]liB.#Aj7LS.">
+                <field name="TYPE">df</field>
+              </block>
+            </value>
+          </block>
+        </value>
+      </block>
+    </statement>
+    <value name="TOOLTIP">
+      <block type="text" id="|v:;=oe`,q_/XmeYm_[B" deletable="false" movable="false">
+        <field name="TEXT"></field>
+      </block>
+    </value>
+    <value name="HELPURL">
+      <block type="text" id="jZ+B0n]:7ZNEuJqd|-K6" deletable="false" movable="false">
+        <field name="TEXT"></field>
+      </block>
+    </value>
+    <value name="OUTPUTTYPE">
+      <shadow type="type_null" id=",)$RQDAA:H/6./0AcdZK"></shadow>
+      <block type="type_group" id="_kUpz-5m5T*o.mz:LGd?">
+        <mutation types="2"></mutation>
+        <value name="TYPE0">
+          <block type="type_other" id="yn?oF,e^hdP,6}+W2;iZ">
+            <field name="TYPE">csv</field>
+          </block>
+        </value>
+        <value name="TYPE1">
+          <block type="type_other" id="r{*Yx_!mdXEYU1Qv)QFB">
+            <field name="TYPE">df</field>
+          </block>
+        </value>
+      </block>
+    </value>
+    <value name="COLOUR">
+      <block type="colour_hue" id="iYKo=@VpQY-:l__.~MyV">
+        <mutation colour="#a5935b"></mutation>
+        <field name="HUE">45</field>
+      </block>
+    </value>
+  </block><block type="factory_base" id="NV`Ylw@OCdZhKes}a/wa" deletable="false" movable="false" x="10" y="10">
+    <mutation connections="LEFT"></mutation>
+    <field name="NAME">stripper</field>
+    <field name="INLINE">AUTO</field>
+    <field name="CONNECTIONS">LEFT</field>
+    <statement name="INPUTS">
+      <block type="input_statement" id="2r4=dm}TQx6b7J7PIc5K">
+        <field name="INPUTNAME">reader</field>
+        <field name="ALIGN">LEFT</field>
+        <statement name="FIELDS">
+          <block type="field_static" id="M_wGWF^GyK!%{D;8B+qU">
+            <field name="TEXT">readers</field>
+          </block>
+        </statement>
+        <value name="TYPE">
+          <shadow type="type_null" id="uvY,-{RI*Tl`2}uhJ=H4"></shadow>
+          <block type="type_group" id="/Khl-D,fybiH0RmsE(2f">
+            <mutation types="2"></mutation>
+            <value name="TYPE0">
+              <block type="type_other" id="QZDBd;gWhK}Wu~]Q0wBz">
+                <field name="TYPE">csv</field>
+              </block>
+            </value>
+            <value name="TYPE1">
+              <block type="type_other" id="Yvfp%V34lWZ|?j_[8LtY">
+                <field name="TYPE">df</field>
+              </block>
+            </value>
+          </block>
+        </value>
+      </block>
+    </statement>
+    <value name="TOOLTIP">
+      <block type="text" id="RcdDk|A7X-imO#HnMzQ}" deletable="false" movable="false">
+        <field name="TEXT"></field>
+      </block>
+    </value>
+    <value name="HELPURL">
+      <block type="text" id="!y31ugLqX9%YW.UUuh$0" deletable="false" movable="false">
+        <field name="TEXT"></field>
+      </block>
+    </value>
+    <value name="OUTPUTTYPE">
+      <shadow type="type_null" id="C|`$S/v96xM60}-um[s}"></shadow>
+      <block type="type_group" id="JP=zRqWj!P0yPr/PJ_-?">
+        <mutation types="2"></mutation>
+        <value name="TYPE0">
+          <block type="type_other" id="6!dD}6_KrNyN:d)USc+y">
+            <field name="TYPE">csv</field>
+          </block>
+        </value>
+        <value name="TYPE1">
+          <block type="type_other" id="%,rC6/*gl,,}f3lUX6[=">
+            <field name="TYPE">df</field>
+          </block>
+        </value>
+      </block>
+    </value>
+    <value name="COLOUR">
+      <block type="colour_hue" id="Vo2c9qGprvsmAIYyk2M7">
+        <mutation colour="#a55b5b"></mutation>
+        <field name="HUE">0</field>
+      </block>
+    </value>
+  </block><block type="factory_base" id="}!P/@o`J_BYe|FO155D}" deletable="false" movable="false" x="10" y="10">
+    <mutation connections="BOTTOM"></mutation>
+    <field name="NAME">data reader</field>
+    <field name="INLINE">INT</field>
+    <field name="CONNECTIONS">BOTTOM</field>
+    <statement name="INPUTS">
+      <block type="input_value" id="tT#3On)5Wan,;RRnzySJ">
+        <field name="INPUTNAME">uri</field>
+        <field name="ALIGN">LEFT</field>
+        <statement name="FIELDS">
+          <block type="field_static" id="o;yt9IY;O~26;/La`}ls">
+            <field name="TEXT">uri</field>
+          </block>
+        </statement>
+        <value name="TYPE">
+          <shadow type="type_null" id="4Gzq~cHOP;;LDNNlz|?`"></shadow>
+          <block type="type_string" id="gD/5v:9u1n5bf~0LC4b["></block>
+        </value>
+        <next>
+          <block type="input_value" id="3C${EYO5Fm{g~=ei)qb1">
+            <field name="INPUTNAME">url</field>
+            <field name="ALIGN">LEFT</field>
+            <statement name="FIELDS">
+              <block type="field_static" id="Z_5DTVZISZp3tZ,-W%3H">
+                <field name="TEXT">url</field>
+              </block>
+            </statement>
+            <value name="TYPE">
+              <shadow type="type_null" id="4Gzq~cHOP;;LDNNlz|?`"></shadow>
+              <block type="type_string" id="5NN$rIg`v^[hdXGM{IeM"></block>
+            </value>
+            <next>
+              <block type="input_dummy" id="u~0Ki6H0^#Xrzke}6;t,">
+                <field name="ALIGN">LEFT</field>
+                <statement name="FIELDS">
+                  <block type="field_static" id="hZf:=4gHp+Os)H2jP!3;">
+                    <field name="TEXT">output type</field>
+                    <next>
+                      <block type="field_dropdown" id="Zsv5SnH~cDacjpHlmq[q">
+                        <mutation options="[&quot;text&quot;,&quot;text&quot;]"></mutation>
+                        <field name="FIELDNAME">streamType</field>
+                        <field name="USER0">csv</field>
+                        <field name="CPU0">csv</field>
+                        <field name="USER1">df</field>
+                        <field name="CPU1">df</field>
+                      </block>
+                    </next>
+                  </block>
+                </statement>
+              </block>
+            </next>
+          </block>
+        </next>
+      </block>
+    </statement>
+    <value name="TOOLTIP">
+      <block type="text" id="]u_1_iq(|{xL4[o(kKBV" deletable="false" movable="false">
+        <field name="TEXT"></field>
+      </block>
+    </value>
+    <value name="HELPURL">
+      <block type="text" id="mMT?V+bqtdY+~k`q@9Sw" deletable="false" movable="false">
+        <field name="TEXT"></field>
+      </block>
+    </value>
+    <value name="BOTTOMTYPE">
+      <shadow type="type_null" id="x^(lbdQ*Rq(y@V?Z`{gT"></shadow>
+      <block type="type_group" id="3S(/b`E)$!1${DuwHotk">
+        <mutation types="2"></mutation>
+        <value name="TYPE0">
+          <block type="type_other" id=".DqSSK)a3B(1~F;0Hd!w">
+            <field name="TYPE">csv</field>
+          </block>
+        </value>
+        <value name="TYPE1">
+          <block type="type_other" id="l:pjlB@.]e8|p=j-w;{x">
+            <field name="TYPE">df</field>
+          </block>
+        </value>
+      </block>
+    </value>
+    <value name="COLOUR">
+      <block type="colour_hue" id="[Vo2TC4#q)8Mjz]TOn@{">
+        <mutation colour="#5b67a5"></mutation>
+        <field name="HUE">230</field>
+      </block>
+    </value>
+  </block><block type="factory_base" id="}!P/@o`J_BYe|FO155D}" deletable="false" movable="false" x="10" y="10">
+    <mutation connections="BOTTOM"></mutation>
+    <field name="NAME">model reader</field>
+    <field name="INLINE">INT</field>
+    <field name="CONNECTIONS">BOTTOM</field>
+    <statement name="INPUTS">
+      <block type="input_value" id="3C${EYO5Fm{g~=ei)qb1">
+        <field name="INPUTNAME">url</field>
+        <field name="ALIGN">LEFT</field>
+        <statement name="FIELDS">
+          <block type="field_static" id="Z_5DTVZISZp3tZ,-W%3H">
+            <field name="TEXT">url</field>
+          </block>
+        </statement>
+        <value name="TYPE">
+          <shadow type="type_null" id="4Gzq~cHOP;;LDNNlz|?`"></shadow>
+          <block type="type_string" id="5NN$rIg`v^[hdXGM{IeM"></block>
+        </value>
+      </block>
+    </statement>
+    <value name="TOOLTIP">
+      <block type="text" id="]u_1_iq(|{xL4[o(kKBV" deletable="false" movable="false">
+        <field name="TEXT"></field>
+      </block>
+    </value>
+    <value name="HELPURL">
+      <block type="text" id="mMT?V+bqtdY+~k`q@9Sw" deletable="false" movable="false">
+        <field name="TEXT"></field>
+      </block>
+    </value>
+    <value name="BOTTOMTYPE">
+      <shadow type="type_null" id="x^(lbdQ*Rq(y@V?Z`{gT"></shadow>
+      <block type="type_other" id=".DqSSK)a3B(1~F;0Hd!w">
+        <field name="TYPE">csv</field>
+      </block>
+    </value>
+    <value name="COLOUR">
+      <block type="colour_hue" id="[Vo2TC4#q)8Mjz]TOn@{">
+        <mutation colour="#80a55b"></mutation>
+        <field name="HUE">90</field>
+      </block>
+    </value>
+  </block></xml>
