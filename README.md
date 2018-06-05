@@ -1,7 +1,7 @@
 # deeplearning4all
 Deep learning (also known as deep structured learning, hierarchical learning or deep machine learning) is a branch of machine learning based on a set of algorithms that attempt to model high level abstractions in data by using a deep graph with multiple processing layers, composed of multiple linear and non-linear transformations.
 
-https://github.com/arunsoman/deeplearning4kids/wiki
+https://github.com/arunsoman/deeplearning4all/wiki
 
 ## Keywords
 ### Backpropagation
@@ -17,4 +17,4 @@ Each of the above mentitioned stuff is an ocean in itself, but in a way these ar
 
 
 planning something like this 
-https://arunsoman.github.io/deeplearning4kids/ui/index.html
+https://arunsoman.github.io/deeplearning4all/ui/index.html
